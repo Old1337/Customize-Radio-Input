@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+form {
+        width: 400px;
+        margin: 20px auto;
+        background-color: aliceblue;
+        padding: 15px;
+}
+
+form > div {
+    padding: 5px 0;
+}
+
+form input[type='radio'] {
+    appearance: none;
+
+}
+
+form label {
+position: relative;
+padding-left: 20px;
+}
+form label::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 1px solid #0075ff;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    -webkit-transform: translatey(-50%);
+    -moz-transform: translatey(-50%);
+    -ms-transform: translatey(-50%);
+    -o-transform: translatey(-50%);
+    background-color: white;
+}
+
+form input[type="radio"]:checked + label::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 1px solid #0075ff;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    background-color: #0075ff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+form input[type="radio"]:checked  + label {
+    color: #0075ff;
+}
+form input[type="radio"]:not(:checked):hover + label::after  {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border: 1px solid #0075ff;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    background-color: #0075ff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    opacity: 0.2;
+}
